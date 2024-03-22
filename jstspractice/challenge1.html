@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Rounds played: <p id="rounds">0</p></p>
+
+    <p>Current total: <p id="totals">0</p></p>
+
+    <p>Current average: <p id="average">0</p></p>
+
+
+     
+
+    <button onclick="addScore(1)">Score1</button>
+    <button onclick="addScore(2)">Score2</button>
+    <button onclick="addScore(3)">Score3</button>
+
+    <script>
+        const addScore = (scoreParam) => {
+            let total = +document.getElementById('totals').innerHTML;
+            let round = +document.getElementById('rounds').innerHTML;
+
+            total = total + scoreParam;
+            round++;
+            const average = total/round;
+            
+            document.getElementById('totals').innerHTML = total;
+            document.getElementById('rounds').innerHTML = round;
+            document.getElementById('average').innerHTML = average;
+
+            if (round === 10) {
+                document.querySelectorAll('button').forEach(button => button.disabled = true)
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

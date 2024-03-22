@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning Javascript</h1>
+    <script>
+        console.log('Hello World')
+
+        //dynamic types
+        let age = 21;
+        console.log(age);
+        console.log(typeof age);
+        age = "twentyone";
+        console.log(age);
+        console.log(typeof age);
+
+        //3. diff between let and const
+        const name = 'Shoaib';
+        console.log(name);
+        // name = 'Thomas';
+
+        //4. Strings
+        const roomSize = '22';
+        const owner = "Thomas's room";
+        console.log(roomSize);
+        console.log(owner);
+
+        const  thisYear = '2024';
+        const nextYear = +thisYear + 1;
+        console.log(nextYear);
+
+        //template strings
+        const displaymsg = `${owner} has ${roomSize} participants`;
+        console.log(displaymsg);
+
+        const nextnextyear = `${+thisYear+2}`
+        console.log(nextnextyear);
+
+        console.log(owner.charAt(5));
+        console.log(thisYear.length);
+        console.log(owner.toUpperCase());
+        console.log(owner.indexOf('s'));
+
+        //5. arrays
+        const colors = ['red', 'green', 'blue'];
+        console.log(colors);
+
+        const colors2 = new Array('red', 'green', 'blue');
+        console.log(colors2);
+
+        console.log(colors[1]);
+        console.log(colors.length);
+
+        colors.push('yellow');
+        console.log(colors);
+
+        const colorreturned = colors.pop();
+        console.log(colors);
+        console.log(colorreturned);
+
+        //lambda expression
+
+
+        //map - returns a new array with same number of element as original array
+        // after applying the transformation
+        const uppercaseColors = colors.map(color => color.toUpperCase());
+        console.log(uppercaseColors);
+
+        // filter - returns a new array with only elements which return true 
+        // for the condition specified
+
+        const colorswithr = colors.filter(color => color.includes('r'))
+        console.log(colorswithr);
+
+        const colorswithmorethan4 = colors.filter(color => color.length >= 4)
+        console.log(colorswithmorethan4);
+        console.log(colors);
+
+        //findIndex - returns an index of the first element that matches the condition
+
+        const colorindex = colors.findIndex(color => color === 'green');
+        console.log(colorindex);
+
+        //find
+        const colorchosen = colors.find(color => color === 'green');
+        console.log(colorchosen);
+
+        //const with arr
+        const newarr = [10,20,30]
+        newarr[2] = 40;
+        console.log(newarr);
+        newarr.push('lunch time sooon')
+        console.log(newarr);
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);            
+        }
+
+        for (let i = 0; i < colors.length; i++) {
+            console.log(colors[i]);            
+        }
+
+        for (const color of colors) {
+            console.log(color);            
+        }
+
+        for (let i = 0; i < colors.length; i++) {
+            console.log(`color at index ${i} is ${colors[i]}`);            
+        }
+
+        let color = "RED";
+        if (color === 'RED') {
+            console.log("It's red");
+        } else if (color === 'GREEN') {
+            console.log("It's green");
+        } else {
+            console.log("It's not red or green");
+        }
+
+        switch (color) {
+            case 'RED':
+                console.log("It's red");
+                break;
+            case 'GREEN':
+                console.log("It's green");
+                break;
+        
+            default:
+                console.log("It's neither");
+                break;
+        }
+
+        // color = 'green'
+        console.log(color === 'RED' ? "its red" : "its not red");
+
+        // objects in javascript
+        const matt = {
+            name: 'matt',
+            age: 26,
+            food: ["pizza", "pasta"],
+            preferences: [
+                {color: 'blue'},
+                {season: 'summer'}
+            ]
+        }
+
+        console.log(matt.preferences[1].season);
+
+        matt.food.push('biryani');
+
+        matt.location = 'Mumbai';
+
+        console.log(matt);
+
+        function sayHello(firsname, surname) {
+            return ('Hello ' + firsname + ' ' + surname)
+        }
+
+        const sayHello1 = (firstname, surname) => {
+            return ('Hello ' + firstname + ' ' + surname)
+        }
+
+        const sayHello2 = (firstname, surname) => ('Hello ' + firstname + ' ' + surname);
+
+        console.log(sayHello('Shoaib', 'Mansoori'));
+        console.log(sayHello1('Shoaib', 'Mansoori'));
+        console.log(sayHello2('Shoaib', 'Mansoori'));
+    </script>
+</body>
+</html>
