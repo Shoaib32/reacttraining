@@ -1,0 +1,10 @@
+.transaction-section {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;}
+
+    .countrySelector{
+        max-width: fit-content;
+        margin: auto;
+      }
